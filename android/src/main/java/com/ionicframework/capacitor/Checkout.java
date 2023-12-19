@@ -70,7 +70,8 @@ public class Checkout extends Plugin  {
             @Override
             public void onPaymentError(int i, String s, PaymentData paymentData) {
                 try{
-                    lastSavedCall.reject(paymentData.getData().getJSONObject("error").toString(),paymentData.getData().getJSONObject("error").toString(), new JSObject());
+                    // lastSavedCall.reject(paymentData.getData().getJSONObject("error").toString(),paymentData.getData().getJSONObject("error").toString(), new JSObject());
+                    lastSavedCall.reject("something wrong");
                 }catch (Exception e){
                     e.printStackTrace();
                 }
